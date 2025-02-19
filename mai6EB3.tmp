@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://bjdjyv0wrgt7r"]
+[gd_scene load_steps=2 format=3 uid="uid://bjdjyv0wrgt7r"]
 
 [ext_resource type="Script" path="res://main_menu.gd" id="1_wr0jr"]
-[ext_resource type="PackedScene" uid="uid://xae3cgy0l4fk" path="res://settings.tscn" id="2_nadid"]
 
 [node name="Main_Menu" type="Control"]
 layout_mode = 3
@@ -14,13 +13,17 @@ script = ExtResource("1_wr0jr")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = -1
+anchors_preset = 7
 anchor_left = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
-offset_left = -234.0
-offset_top = 400.0
-offset_right = 166.0
-offset_bottom = 501.0
+anchor_bottom = 1.0
+offset_left = -184.0
+offset_top = -240.0
+offset_right = 172.0
+offset_bottom = -131.0
+grow_horizontal = 2
+grow_vertical = 0
 scale = Vector2(1.16616, 1.24242)
 alignment = 1
 
@@ -42,15 +45,6 @@ focus_neighbor_top = NodePath("../Settings_Button")
 focus_neighbor_bottom = NodePath("../Start_Button")
 text = "Quit Game"
 
-[node name="settingWindow" type="Window" parent="."]
-initial_position = 2
-size = Vector2i(375, 350)
-visible = false
-unresizable = true
-
-[node name="Settings" parent="settingWindow" instance=ExtResource("2_nadid")]
-
 [connection signal="pressed" from="VBoxContainer/Start_Button" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/Settings_Button" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quit_Button" to="." method="_on_quit_button_pressed"]
-[connection signal="close_requested" from="settingWindow" to="." method="_on_setting_window_close_requested"]
