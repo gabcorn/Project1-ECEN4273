@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bkyw8pc35e8ek"]
+
+[ext_resource type="PackedScene" uid="uid://bi4ety07n3tx0" path="res://character_body_2d.tscn" id="1_w2e6l"]
+[ext_resource type="Script" path="res://collision_shape_2d.gd" id="2_afjgq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nes1k"]
+size = Vector2(1149, 646)
+
+[node name="Map" type="Node2D"]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_w2e6l")]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+physics_interpolation_mode = 1
+position = Vector2(576, -324)
+shape = SubResource("RectangleShape2D_nes1k")
+one_way_collision_margin = 22.9
+script = ExtResource("2_afjgq")
