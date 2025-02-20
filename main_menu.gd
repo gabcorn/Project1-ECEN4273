@@ -12,9 +12,8 @@ func _process(delta: float) -> void:
 
 
 func _on_start_button_pressed() -> void:
-	# get_tree().change_scene("FIRST SCENE PATH HERE")
-	pass
-
+	get_tree().change_scene_to_file("Map.tscn")
+	
 
 func _on_settings_button_pressed() -> void:
 	get_node("settingWindow").visible = true # Brings up the settings window
