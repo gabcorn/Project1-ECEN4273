@@ -45,9 +45,20 @@ process_mode = 3
 position = Vector2(100, 50)
 script = SubResource("GDScript_oqu3l")
 
+[node name="settingWindow" type="Window" parent="."]
+auto_translate_mode = 1
+initial_position = 2
+size = Vector2i(375, 350)
+visible = false
+unresizable = true
+
+[node name="Settings" parent="settingWindow" instance=ExtResource("1_xv84v")]
+
 [node name="Container" type="VBoxContainer" parent="."]
-offset_right = 200.0
-offset_bottom = 101.0
+offset_left = -25.0
+offset_top = -0.5
+offset_right = 175.0
+offset_bottom = 100.5
 
 [node name="Return to Play" type="Button" parent="Container"]
 layout_mode = 2
@@ -61,16 +72,7 @@ text = "Settings"
 layout_mode = 2
 text = "Quit Game"
 
-[node name="settingWindow" type="Window" parent="."]
-auto_translate_mode = 1
-initial_position = 2
-size = Vector2i(375, 350)
-visible = false
-unresizable = true
-
-[node name="Settings" parent="settingWindow" instance=ExtResource("1_xv84v")]
-
+[connection signal="close_requested" from="settingWindow" to="." method="_on_setting_window_close_requested"]
 [connection signal="pressed" from="Container/Return to Play" to="." method="_on_return_to_play_pressed"]
 [connection signal="pressed" from="Container/Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="Container/Quit Game" to="." method="_on_quit_game_pressed"]
-[connection signal="close_requested" from="settingWindow" to="." method="_on_setting_window_close_requested"]

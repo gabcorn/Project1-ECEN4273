@@ -1,10 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://bkyw8pc35e8ek"]
+[gd_scene load_steps=7 format=3 uid="uid://bkyw8pc35e8ek"]
 
 [ext_resource type="PackedScene" uid="uid://bi4ety07n3tx0" path="res://character_body_2d.tscn" id="1_w2e6l"]
 [ext_resource type="Script" path="res://collision_shape_2d.gd" id="2_afjgq"]
+[ext_resource type="Script" path="res://pause_button.gd" id="3_ruouf"]
+[ext_resource type="PackedScene" uid="uid://gr7rkt00brpy" path="res://pause_menu.tscn" id="4_y20q7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nes1k"]
 size = Vector2(1149, 646)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_30l6d"]
 
 [node name="Map" type="Node2D"]
 
@@ -18,3 +22,24 @@ position = Vector2(576, -324)
 shape = SubResource("RectangleShape2D_nes1k")
 one_way_collision_margin = 22.9
 script = ExtResource("2_afjgq")
+
+[node name="PauseButton" type="Button" parent="."]
+offset_left = 1046.0
+offset_top = 25.0
+offset_right = 1120.0
+offset_bottom = 56.0
+text = "Pause"
+icon = SubResource("ViewportTexture_30l6d")
+script = ExtResource("3_ruouf")
+
+[node name="pauseWindow" type="Window" parent="PauseButton"]
+auto_translate_mode = 1
+initial_position = 2
+size = Vector2i(350, 200)
+visible = false
+unresizable = true
+
+[node name="Pause_Menu" parent="PauseButton/pauseWindow" instance=ExtResource("4_y20q7")]
+
+[connection signal="pressed" from="PauseButton" to="PauseButton" method="_on_pressed"]
+[connection signal="close_requested" from="PauseButton/pauseWindow" to="PauseButton" method="_on_pause_window_close_requested"]
