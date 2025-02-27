@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://bqfmddvb1ed20"]
+
+[ext_resource type="Script" path="res://pause_button.gd" id="1_1p2tx"]
+[ext_resource type="PackedScene" uid="uid://gr7rkt00brpy" path="res://pause_menu.tscn" id="2_orqyj"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_bdpdg"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="PauseButton" type="Button" parent="."]
+offset_left = 1046.0
+offset_top = 25.0
+offset_right = 1120.0
+offset_bottom = 56.0
+text = "Pause"
+icon = SubResource("ViewportTexture_bdpdg")
+script = ExtResource("1_1p2tx")
+
+[node name="pauseWindow" type="Window" parent="PauseButton"]
+auto_translate_mode = 1
+initial_position = 2
+size = Vector2i(350, 200)
+visible = false
+unresizable = true
+
+[node name="Pause_Menu" parent="PauseButton/pauseWindow" instance=ExtResource("2_orqyj")]
+
+[connection signal="pressed" from="PauseButton" to="PauseButton" method="_on_pressed"]
+[connection signal="close_requested" from="PauseButton/pauseWindow" to="PauseButton" method="_on_pause_window_close_requested"]
