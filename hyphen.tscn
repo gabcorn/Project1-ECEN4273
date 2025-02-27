@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://bt08xh27n82h0"]
+
+[ext_resource type="Texture2D" uid="uid://cs3m6ywqkjcjc" path="res://Idle Asterisk Animation (1).png" id="1_ltfjk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7dv2f"]
+atlas = ExtResource("1_ltfjk")
+region = Rect2(0, 58, 29, 29)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lktsx"]
+atlas = ExtResource("1_ltfjk")
+region = Rect2(29, 58, 29, 29)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qyvgo"]
+animations = [{
+"frames": [{
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_7dv2f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lktsx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[node name="Hyphen" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_qyvgo")
+autoplay = "default"
