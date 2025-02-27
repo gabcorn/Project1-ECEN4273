@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://dpxc2jwa0sj86"]
 
-[ext_resource type="Script" path="res://pause_button.gd" id="1_1p2tx"]
-[ext_resource type="PackedScene" uid="uid://gr7rkt00brpy" path="res://pause_menu.tscn" id="2_orqyj"]
-[ext_resource type="PackedScene" uid="uid://e2mcqvuxloy0" path="res://health_bar.tscn" id="3_jfpkq"]
+[ext_resource type="Script" path="res://Game_Logic_and_UI/pause_button.gd" id="1_1p2tx"]
+[ext_resource type="PackedScene" uid="uid://gr7rkt00brpy" path="res://Game_Logic_and_UI/pause_menu.tscn" id="2_orqyj"]
+[ext_resource type="PackedScene" uid="uid://e2mcqvuxloy0" path="res://Game_Logic_and_UI/health_bar.tscn" id="3_jfpkq"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_bdpdg"]
 

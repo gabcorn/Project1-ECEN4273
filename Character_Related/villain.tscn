@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://blqpjlglprcso"]
 
-[ext_resource type="Script" path="res://villain_logic.gd" id="1_hcutg"]
+[ext_resource type="Script" path="res://Character_Related/villain_logic.gd" id="1_hcutg"]
 [ext_resource type="Texture2D" uid="uid://bkq1ogt7ncr5w" path="res://icon.svg" id="2_37oka"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hv7tk"]

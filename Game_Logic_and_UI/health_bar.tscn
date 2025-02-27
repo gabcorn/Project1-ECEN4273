@@ -1,6 +1,15 @@
 [gd_scene load_steps=2 format=3 uid="uid://e2mcqvuxloy0"]
 
-[ext_resource type="Script" path="res://health_bar.gd" id="1_7odfd"]
+[sub_resource type="GDScript" id="GDScript_bhm3c"]
+script/source = "extends HBoxContainer
+
+func _ready() -> void:
+	pass
+	
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
 
 [node name="HBoxContainer" type="HBoxContainer"]
 offset_left = 410.0
@@ -11,4 +20,4 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = 3
 alignment = 1
-script = ExtResource("1_7odfd")
+script = SubResource("GDScript_bhm3c")

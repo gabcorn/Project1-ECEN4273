@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cwdr82kkcmwsh"]
+[gd_scene load_steps=17 format=3 uid="uid://ctlj2e48fcpne"]
 
 [ext_resource type="Texture2D" uid="uid://cdqxi5s20hq1r" path="res://Images/IdleHealthBarImages/HealthbarAnimation.png" id="1_4tew1"]
 [ext_resource type="Texture2D" uid="uid://ounrgk5hj0kf" path="res://Images/IdleHealthBarImages/tile009.png" id="2_lhn8x"]

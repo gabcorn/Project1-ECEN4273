@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://bkyw8pc35e8ek"]
+
+[ext_resource type="PackedScene" uid="uid://d3brpoioce6hk" path="res://Character_Related/character_body_2d.tscn" id="1_2xggm"]
+[ext_resource type="Script" path="res://Game_Logic_and_UI/collision_shape_2d.gd" id="2_x6ech"]
+[ext_resource type="PackedScene" uid="uid://dpxc2jwa0sj86" path="res://Game_Logic_and_UI/ui.tscn" id="3_q0om5"]
+[ext_resource type="PackedScene" uid="uid://blqpjlglprcso" path="res://Character_Related/villain.tscn" id="4_eu8aw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nes1k"]
+size = Vector2(1149, 646)
+
+[node name="Map" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_2xggm")]
+position = Vector2(236, 262)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+physics_interpolation_mode = 1
+position = Vector2(576, -324)
+shape = SubResource("RectangleShape2D_nes1k")
+one_way_collision_margin = 22.9
+script = ExtResource("2_x6ech")
+
+[node name="CanvasLayer" parent="." instance=ExtResource("3_q0om5")]
+
+[node name="Villain" parent="." instance=ExtResource("4_eu8aw")]
+position = Vector2(700, 280)
