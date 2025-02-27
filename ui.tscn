@@ -8,36 +8,42 @@
 
 [node name="CanvasLayer" type="CanvasLayer"]
 
-[node name="PauseButton" type="Button" parent="."]
-offset_left = 1046.0
-offset_top = 25.0
-offset_right = 1120.0
+[node name="TopBar" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -576.0
+offset_right = 576.0
 offset_bottom = 56.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" parent="TopBar" instance=ExtResource("3_jfpkq")]
+layout_mode = 0
+offset_left = 309.0
+offset_top = 5.0
+offset_right = 777.0
+offset_bottom = 49.0
+
+[node name="PauseButton" type="Button" parent="TopBar"]
+layout_mode = 0
+offset_left = 1024.0
+offset_top = 8.0
+offset_right = 1146.0
+offset_bottom = 39.0
 text = "Pause"
 icon = SubResource("ViewportTexture_bdpdg")
 script = ExtResource("1_1p2tx")
 
-[node name="pauseWindow" type="Window" parent="PauseButton"]
+[node name="pauseWindow" type="Window" parent="TopBar/PauseButton"]
 auto_translate_mode = 1
 initial_position = 2
 size = Vector2i(350, 200)
 visible = false
 unresizable = true
 
-[node name="Pause_Menu" parent="PauseButton/pauseWindow" instance=ExtResource("2_orqyj")]
+[node name="Pause_Menu" parent="TopBar/PauseButton/pauseWindow" instance=ExtResource("2_orqyj")]
 
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="HBoxContainer" parent="Control" instance=ExtResource("3_jfpkq")]
-layout_mode = 0
-offset_left = 444.0
-offset_top = -2.0
-offset_right = 838.0
-offset_bottom = 42.0
-
-[connection signal="pressed" from="PauseButton" to="PauseButton" method="_on_pressed"]
-[connection signal="close_requested" from="PauseButton/pauseWindow" to="PauseButton" method="_on_pause_window_close_requested"]
+[connection signal="pressed" from="TopBar/PauseButton" to="TopBar/PauseButton" method="_on_pressed"]
+[connection signal="close_requested" from="TopBar/PauseButton/pauseWindow" to="TopBar/PauseButton" method="_on_pause_window_close_requested"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cs3m6ywqkjcjc"
-path="res://.godot/imported/Idle Asterisk Animation (1).png-c4d88a600e71288910cd0090be6ba4d5.ctex"
+uid="uid://b6lpjawf87rrj"
+path="res://.godot/imported/tile004.png-17f7d10b159edbf1c47e348c351aa402.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Idle Asterisk Animation (1).png"
-dest_files=["res://.godot/imported/Idle Asterisk Animation (1).png-c4d88a600e71288910cd0090be6ba4d5.ctex"]
+source_file="res://Images/IdleHealthBarImages/tile004.png"
+dest_files=["res://.godot/imported/tile004.png-17f7d10b159edbf1c47e348c351aa402.ctex"]
 
 [params]
 
