@@ -34,3 +34,4 @@ position = Vector2(22, 22)
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_s0eul")
 animation = &"Idle"
+autoplay = "Idle"

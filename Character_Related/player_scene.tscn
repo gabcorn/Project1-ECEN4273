@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://d3brpoioce6hk"]
+
+[ext_resource type="Script" path="res://Character_Related/movement.gd" id="1_6n7k2"]
+[ext_resource type="Script" path="res://Game_Logic_and_UI/collision_shape_2d.gd" id="2_0wx1w"]
+[ext_resource type="Texture2D" uid="uid://bkq1ogt7ncr5w" path="res://icon.svg" id="3_cs2yf"]
+[ext_resource type="PackedScene" uid="uid://e2mcqvuxloy0" path="res://Game_Logic_and_UI/health_bar.tscn" id="4_1ydvr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s8xrf"]
+size = Vector2(118.75, 116.5)
+
+[node name="Player" type="CharacterBody2D"]
+position = Vector2(-74, -48)
+script = ExtResource("1_6n7k2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(74.625, 46.75)
+shape = SubResource("RectangleShape2D_s8xrf")
+script = ExtResource("2_0wx1w")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(73, 48)
+texture = ExtResource("3_cs2yf")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Health_Bar" parent="CanvasLayer" instance=ExtResource("4_1ydvr")]
+visible = true
