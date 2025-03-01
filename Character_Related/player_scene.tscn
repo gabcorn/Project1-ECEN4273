@@ -25,3 +25,11 @@ texture = ExtResource("3_cs2yf")
 
 [node name="Health_Bar" parent="CanvasLayer" instance=ExtResource("4_1ydvr")]
 visible = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -257.0
+offset_top = 0.0
+offset_right = 257.0
+offset_bottom = 44.0
+grow_horizontal = 2
