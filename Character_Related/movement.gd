@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const SPEED = 10.0
+@export var SPEED = 10.0
 var health_list : Array[TextureRect]
 var max_health = 9
 var curr_health = max_health * 2

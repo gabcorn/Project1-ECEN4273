@@ -147,7 +147,7 @@ custom_minimum_size = Vector2(44, 44)
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Asterisk" type="AnimatedSprite2D" parent="."]
+[node name="AsteriskSprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(22, 22)
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_stcss")

@@ -1,8 +1,9 @@
-extends CharacterBody2D
+extends "res://Character_Related/movement.gd"
 
-
-const SPEED = 5.0
-#const JUMP_VELOCITY = -400.0
+func _ready() -> void:
+	generate_random_SSN()
+	update_health_bar()
+	
 
 
 func _physics_process(delta: float) -> void:

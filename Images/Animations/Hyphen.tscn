@@ -29,7 +29,7 @@ custom_minimum_size = Vector2(44, 44)
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Hyphen" type="AnimatedSprite2D" parent="."]
+[node name="HyphenSprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(22, 22)
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_s0eul")
