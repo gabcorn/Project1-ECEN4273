@@ -1,11 +1,14 @@
 [gd_scene load_steps=6 format=3 uid="uid://bkyw8pc35e8ek"]
 
 <<<<<<< Updated upstream:Map.tscn
+<<<<<<< Updated upstream:Map.tscn
 [ext_resource type="PackedScene" uid="uid://d3brpoioce6hk" path="res://character_body_2d.tscn" id="1_w2e6l"]
 [ext_resource type="Script" path="res://collision_shape_2d.gd" id="2_afjgq"]
 [ext_resource type="PackedScene" uid="uid://bqfmddvb1ed20" path="res://ui.tscn" id="3_7gk1n"]
 [ext_resource type="PackedScene" uid="uid://blqpjlglprcso" path="res://villain.tscn" id="4_47hog"]
 =======
+=======
+>>>>>>> Stashed changes:Map_Related/Map.tscn
 [ext_resource type="PackedScene" uid="uid://d3brpoioce6hk" path="res://Character_Related/player_scene.tscn" id="1_2xggm"]
 [ext_resource type="Script" path="res://Game_Logic_and_UI/collision_shape_2d.gd" id="2_x6ech"]
 [ext_resource type="PackedScene" uid="uid://dpxc2jwa0sj86" path="res://Game_Logic_and_UI/ui.tscn" id="3_q0om5"]
