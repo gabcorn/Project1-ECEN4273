@@ -11,7 +11,7 @@ size = Vector2(1149, 646)
 [node name="Map" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_2xggm")]
-position = Vector2(236, 262)
+position = Vector2(428, 230)
 
 [node name="Area2D" type="Area2D" parent="."]
 
@@ -25,4 +25,4 @@ script = ExtResource("2_x6ech")
 [node name="CanvasLayer" parent="." instance=ExtResource("3_q0om5")]
 
 [node name="Villain" parent="." instance=ExtResource("4_eu8aw")]
-position = Vector2(700, 280)
+position = Vector2(914, 277)
