@@ -23,4 +23,5 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity = Vector2(0, 0)
 
-	move_and_collide(velocity)
+	var collision = move_and_collide(velocity)
+	

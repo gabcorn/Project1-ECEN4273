@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+signal collided(collider)
 
 @export var SPEED = 10.0
 var health_list : Array[TextureRect]
@@ -56,6 +57,8 @@ func update_health_bar() -> void:
 		10: 8
 	}
 	
+	if health_bar == null:
+		print("Health bar not found")
 	var children = health_bar.get_children()
 	for i in range(len(children)):
 		
@@ -91,4 +94,6 @@ func _physics_process(delta: float) -> void:
 	var direction = Input.get_vector("Left","Right","Up","Down")
 	velocity = direction * SPEED
 
-	move_and_collide(velocity)
+	var collision = move_and_collide(velocity)
+	if collision and collision.get_collider().name == "Villain":
+		Global.player_collided.emit(self)
