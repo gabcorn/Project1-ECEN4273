@@ -4,7 +4,6 @@ extends CharacterBody2D
 const SPEED = 10.0
 #const JUMP_VELOCITY = -400.0
 
-
 func _physics_process(delta: float) -> void:
 	##no gravity for top down
 	# Add the gravity.
@@ -24,5 +23,6 @@ func _physics_process(delta: float) -> void:
 
 		
 	move_and_collide(velocity)
+	
 
 		
