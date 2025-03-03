@@ -20,7 +20,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_fdvt0")
 }],
 "loop": true,
-"name": &"Idle",
+"name": &"IdleFull",
 "speed": 5.0
 }]
 
@@ -33,5 +33,5 @@ offset_bottom = 40.0
 position = Vector2(22, 22)
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_s0eul")
-animation = &"Idle"
-autoplay = "Idle"
+animation = &"IdleFull"
+autoplay = "IdleFull"

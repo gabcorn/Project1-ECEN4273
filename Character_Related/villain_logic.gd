@@ -1,12 +1,10 @@
 extends "res://Character_Related/movement.gd"
 
 func _ready() -> void:
-	print("In Villain")
+	set_health_bar($Health_Bar)
 	generate_random_SSN()
-	update_health_bar()
+	#update_health_bar()
 	
-
-
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	
