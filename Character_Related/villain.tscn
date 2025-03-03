@@ -1,19 +1,20 @@
 [gd_scene load_steps=5 format=3 uid="uid://blqpjlglprcso"]
 
 [ext_resource type="Script" path="res://Character_Related/villain_logic.gd" id="1_hcutg"]
-[ext_resource type="Texture2D" uid="uid://bkq1ogt7ncr5w" path="res://icon.svg" id="2_37oka"]
+[ext_resource type="Texture2D" uid="uid://btxtumqquodxt" path="res://lannan_low.png" id="2_1nl2m"]
 [ext_resource type="PackedScene" uid="uid://e2mcqvuxloy0" path="res://Game_Logic_and_UI/health_bar.tscn" id="3_aw7wf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hv7tk"]
-size = Vector2(128, 128)
+size = Vector2(105, 98)
 
 [node name="Villain" type="CharacterBody2D"]
 script = ExtResource("1_hcutg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 1)
 shape = SubResource("RectangleShape2D_hv7tk")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_37oka")
+texture = ExtResource("2_1nl2m")
 
 [node name="Health_Bar" parent="." instance=ExtResource("3_aw7wf")]
