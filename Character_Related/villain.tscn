@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://blqpjlglprcso"]
+[gd_scene load_steps=6 format=3 uid="uid://blqpjlglprcso"]
 
 [ext_resource type="Script" path="res://Character_Related/villain_logic.gd" id="1_hcutg"]
 [ext_resource type="Texture2D" uid="uid://bkq1ogt7ncr5w" path="res://icon.svg" id="2_37oka"]
@@ -7,11 +7,22 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hv7tk"]
 size = Vector2(128, 128)
 
+[sub_resource type="GDScript" id="GDScript_7b7nk"]
+script/source = "extends CollisionShape2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
 [node name="Villain" type="CharacterBody2D"]
 script = ExtResource("1_hcutg")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_hv7tk")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_37oka")
@@ -23,3 +34,7 @@ offset_top = -87.0
 offset_right = 385.0
 offset_bottom = -43.0
 scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_hv7tk")
+script = SubResource("GDScript_7b7nk")
