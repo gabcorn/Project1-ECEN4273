@@ -1,6 +1,7 @@
 extends "res://Character_Related/movement.gd"
 
 func _ready() -> void:
+	print("In Villain")
 	generate_random_SSN()
 	update_health_bar()
 	

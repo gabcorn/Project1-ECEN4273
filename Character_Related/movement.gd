@@ -9,6 +9,7 @@ var SSN: Array[int] = []
 #const JUMP_VELOCITY = -400.0
 
 func _ready() -> void:
+	print("In Hero")
 	generate_random_SSN()
 	update_health_bar()
 
@@ -40,6 +41,7 @@ func die() -> void:
 	pass
 
 func update_health_bar() -> void:
+	print("In hero update")
 	var health_bar = $CanvasLayer/Health_Bar
 	var num_full_hearts = curr_health / 2  # Number of full hearts to end up in the healthbar
 	var num_half_hearts = curr_health % 2 # Will be either 0 or 1
