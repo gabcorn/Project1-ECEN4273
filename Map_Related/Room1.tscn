@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://d3brpoioce6hk" path="res://Character_Related/player_scene.tscn" id="1_7m2cu"]
 [ext_resource type="PackedScene" uid="uid://dpxc2jwa0sj86" path="res://Game_Logic_and_UI/ui.tscn" id="2_f6jq6"]
-[ext_resource type="Script" path="res://Map_Related/passage.gd" id="3_ssdce"]
+[ext_resource type="Script" path="res://Map_Related/passage_2.gd" id="3_ye6uw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8sn3p"]
 size = Vector2(69.4, 20)
@@ -47,12 +47,12 @@ position = Vector2(557, -198)
 scale = Vector2(20, 20)
 shape = SubResource("RectangleShape2D_u7lxu")
 
-[node name="Passage" type="Area2D" parent="."]
-script = ExtResource("3_ssdce")
+[node name="Passage2" type="Area2D" parent="."]
+script = ExtResource("3_ye6uw")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Passage"]
-position = Vector2(1151, 290)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Passage2"]
+position = Vector2(-14.9999, 322)
 scale = Vector2(5, 5)
 shape = SubResource("RectangleShape2D_eb231")
 
-[connection signal="body_entered" from="Passage" to="Passage" method="_on_body_entered"]
+[connection signal="body_entered" from="Passage2" to="Passage2" method="_on_body_entered"]
