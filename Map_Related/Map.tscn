@@ -1,28 +1,63 @@
-[gd_scene load_steps=6 format=3 uid="uid://bkyw8pc35e8ek"]
+[gd_scene load_steps=10 format=3 uid="uid://bkyw8pc35e8ek"]
 
 [ext_resource type="PackedScene" uid="uid://d3brpoioce6hk" path="res://Character_Related/player_scene.tscn" id="1_2xggm"]
-[ext_resource type="Script" path="res://Game_Logic_and_UI/collision_shape_2d.gd" id="2_x6ech"]
 [ext_resource type="PackedScene" uid="uid://dpxc2jwa0sj86" path="res://Game_Logic_and_UI/ui.tscn" id="3_q0om5"]
+[ext_resource type="Script" path="res://Map_Related/passage.gd" id="4_asn6v"]
 [ext_resource type="PackedScene" uid="uid://blqpjlglprcso" path="res://Character_Related/villain.tscn" id="4_eu8aw"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_nes1k"]
-size = Vector2(1149, 646)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vxqu6"]
+size = Vector2(69.4, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s2hci"]
+size = Vector2(37, 97.2)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nb545"]
+size = Vector2(20, 46.1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8g3s1"]
+size = Vector2(68.3, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_omphw"]
 
 [node name="Map" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_2xggm")]
 position = Vector2(236, 262)
 
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-physics_interpolation_mode = 1
-position = Vector2(576, -324)
-shape = SubResource("RectangleShape2D_nes1k")
-one_way_collision_margin = 22.9
-script = ExtResource("2_x6ech")
-
 [node name="CanvasLayer" parent="." instance=ExtResource("3_q0om5")]
 
 [node name="Villain" parent="." instance=ExtResource("4_eu8aw")]
 position = Vector2(700, 280)
+
+[node name="Walls" type="StaticBody2D" parent="."]
+
+[node name="South-Wall" type="CollisionShape2D" parent="Walls"]
+position = Vector2(512, 848)
+scale = Vector2(20, 20)
+shape = SubResource("RectangleShape2D_vxqu6")
+
+[node name="West-Wall" type="CollisionShape2D" parent="Walls"]
+position = Vector2(-181, 383)
+scale = Vector2(10, 10)
+shape = SubResource("RectangleShape2D_s2hci")
+
+[node name="East-Wall" type="CollisionShape2D" parent="Walls"]
+position = Vector2(1350, 304)
+scale = Vector2(20, 20)
+shape = SubResource("RectangleShape2D_nb545")
+
+[node name="North-Wall" type="CollisionShape2D" parent="Walls"]
+position = Vector2(557, -198)
+scale = Vector2(20, 20)
+shape = SubResource("RectangleShape2D_8g3s1")
+
+[node name="Passage" type="Area2D" parent="."]
+script = ExtResource("4_asn6v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Passage"]
+position = Vector2(1151, 290)
+scale = Vector2(5, 5)
+shape = SubResource("RectangleShape2D_omphw")
+
+[connection signal="body_entered" from="Passage" to="Player" method="_on_passage_body_entered"]
+[connection signal="body_entered" from="Passage" to="Passage" method="_on_body_entered"]

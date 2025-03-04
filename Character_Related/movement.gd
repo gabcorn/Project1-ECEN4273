@@ -113,3 +113,7 @@ func timed_damage():
 		take_damage(1)
 		await get_tree().create_timer(1.0).timeout
 		i -= 1
+
+
+func _on_passage_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.
