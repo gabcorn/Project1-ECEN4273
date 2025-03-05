@@ -19,7 +19,7 @@ func _physics_process(delta: float) -> void:
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var dist_vec = get_parent().get_node("Player").global_position - self.global_position + Vector2(0,0)
+	var dist_vec = get_parent().get_parent().get_node("Player").global_position - self.global_position + Vector2(0,0)
 	var dist = ((dist_vec.x ** 2) + (dist_vec.y ** 2)) ** .5
 	var direction = dist_vec.normalized()
 	var velocity = 0

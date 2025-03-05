@@ -1,8 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://b2q1uo1427ksy"]
+[gd_scene load_steps=9 format=3 uid="uid://bovtw5snpkl27"]
 
-[ext_resource type="PackedScene" uid="uid://blqpjlglprcso" path="res://Character_Related/villain.tscn" id="2_ei76d"]
-[ext_resource type="PackedScene" uid="uid://dpxc2jwa0sj86" path="res://Game_Logic_and_UI/ui.tscn" id="2_f6jq6"]
-[ext_resource type="Script" path="res://Map_Related/passage_2.gd" id="3_ye6uw"]
+[ext_resource type="PackedScene" uid="uid://dpxc2jwa0sj86" path="res://Game_Logic_and_UI/ui.tscn" id="1_m4n6e"]
+[ext_resource type="Script" path="res://Map_Related/passage_2.gd" id="2_bmwmw"]
+[ext_resource type="PackedScene" uid="uid://blqpjlglprcso" path="res://Character_Related/villain.tscn" id="3_2a7ki"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8sn3p"]
 size = Vector2(69.4, 20)
@@ -18,12 +18,12 @@ size = Vector2(68.3, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eb231"]
 
-[node name="Room1" type="Node2D"]
+[node name="PiaoRoom" type="Node2D"]
 
 [node name="PlayerSpawn" type="Polygon2D" parent="."]
 position = Vector2(98, 317)
 
-[node name="CanvasLayer" parent="." instance=ExtResource("2_f6jq6")]
+[node name="CanvasLayer" parent="." instance=ExtResource("1_m4n6e")]
 
 [node name="Walls" type="StaticBody2D" parent="."]
 
@@ -48,14 +48,14 @@ scale = Vector2(20, 20)
 shape = SubResource("RectangleShape2D_u7lxu")
 
 [node name="Passage2" type="Area2D" parent="."]
-script = ExtResource("3_ye6uw")
+script = ExtResource("2_bmwmw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Passage2"]
 position = Vector2(-14.9999, 322)
 scale = Vector2(5, 5)
 shape = SubResource("RectangleShape2D_eb231")
 
-[node name="Villain" parent="." instance=ExtResource("2_ei76d")]
+[node name="Villain" parent="." instance=ExtResource("3_2a7ki")]
 position = Vector2(971, 330)
 
 [connection signal="body_entered" from="Passage2" to="Passage2" method="_on_body_entered"]

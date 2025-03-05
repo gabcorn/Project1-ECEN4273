@@ -101,7 +101,7 @@ func _input(event):
 			if keyChange[key]:
 				keyList[key] = event
 				keyChange[key] = false
-		_set_keys()
+		
 	# Activates if there is a none key input after the initial clicking of a button
 	# Indicates the user did not want to change their key input
 	elif i > 0:

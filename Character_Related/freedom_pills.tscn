@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://ccire0j347s2v"]
 
 [ext_resource type="Script" path="res://Character_Related/freedom_pills.gd" id="1_5u5sl"]
-[ext_resource type="Texture2D" uid="uid://bdloy57mhtxbw" path="res://Images/FreedomPills/FreedomPill.png" id="2_q8yjt"]
+[ext_resource type="Texture2D" uid="uid://bdloy57mhtxbw" path="res://Map_Related/Images/FreedomPills/FreedomPill.png" id="2_q8yjt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qjegg"]
 size = Vector2(266.667, 216.667)

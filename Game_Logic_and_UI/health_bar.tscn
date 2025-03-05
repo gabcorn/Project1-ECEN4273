@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://e2mcqvuxloy0"]
 
-[ext_resource type="PackedScene" uid="uid://ctlj2e48fcpne" path="res://Images/Animations/Asterisk.tscn" id="1_2lo1l"]
-[ext_resource type="PackedScene" uid="uid://xaii2vlxi1do" path="res://Images/Animations/Hyphen.tscn" id="2_tf40a"]
+[ext_resource type="PackedScene" uid="uid://ctlj2e48fcpne" path="res://Map_Related/Images/Animations/Asterisk.tscn" id="1_2lo1l"]
+[ext_resource type="PackedScene" uid="uid://xaii2vlxi1do" path="res://Map_Related/Images/Animations/Hyphen.tscn" id="2_tf40a"]
 
 [node name="Health_Bar" type="HBoxContainer"]
 visible = false

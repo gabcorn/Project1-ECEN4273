@@ -1,0 +1,155 @@
+[gd_scene load_steps=17 format=3 uid="uid://ctlj2e48fcpne"]
+
+[ext_resource type="Texture2D" uid="uid://cdqxi5s20hq1r" path="res://Map_Related/Images/IdleHealthBarImages/HealthbarAnimation.png" id="1_4tew1"]
+[ext_resource type="Texture2D" uid="uid://ounrgk5hj0kf" path="res://Map_Related/Images/IdleHealthBarImages/tile009.png" id="2_lhn8x"]
+[ext_resource type="Texture2D" uid="uid://bkjgdk6c5mgf4" path="res://Map_Related/Images/IdleHealthBarImages/tile010.png" id="3_0xgpc"]
+[ext_resource type="Texture2D" uid="uid://u3be2qew4qir" path="res://Map_Related/Images/IdleHealthBarImages/tile011.png" id="4_kpu7n"]
+[ext_resource type="Texture2D" uid="uid://ok3lmp13xlbk" path="res://Map_Related/Images/IdleHealthBarImages/tile012.png" id="5_p4fdt"]
+[ext_resource type="Texture2D" uid="uid://bwp2nun8h37r2" path="res://Map_Related/Images/IdleHealthBarImages/tile013.png" id="6_cwivf"]
+[ext_resource type="Texture2D" uid="uid://l6tk81c7urer" path="res://Map_Related/Images/IdleHealthBarImages/tile014.png" id="7_gix3s"]
+[ext_resource type="Texture2D" uid="uid://ct0prhdq4n5o1" path="res://Map_Related/Images/IdleHealthBarImages/tile015.png" id="8_ddk3p"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5r4ei"]
+atlas = ExtResource("1_4tew1")
+region = Rect2(58, 29, 29, 29)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rqb0d"]
+atlas = ExtResource("1_4tew1")
+region = Rect2(87, 29, 29, 29)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hrp2s"]
+atlas = ExtResource("1_4tew1")
+region = Rect2(0, 58, 29, 29)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qv1t5"]
+atlas = ExtResource("1_4tew1")
+region = Rect2(0, 0, 29, 29)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qpik5"]
+atlas = ExtResource("1_4tew1")
+region = Rect2(29, 0, 29, 29)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_er7xt"]
+atlas = ExtResource("1_4tew1")
+region = Rect2(58, 0, 29, 29)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rauv1"]
+atlas = ExtResource("1_4tew1")
+region = Rect2(87, 0, 29, 29)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_stcss"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5r4ei")
+}],
+"loop": true,
+"name": &"0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rqb0d")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hrp2s")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_lhn8x")
+}],
+"loop": true,
+"name": &"3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_0xgpc")
+}],
+"loop": true,
+"name": &"4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_kpu7n")
+}],
+"loop": true,
+"name": &"5",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_p4fdt")
+}],
+"loop": true,
+"name": &"6",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_cwivf")
+}],
+"loop": true,
+"name": &"7",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_gix3s")
+}],
+"loop": true,
+"name": &"8",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_ddk3p")
+}],
+"loop": true,
+"name": &"9",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qv1t5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qpik5")
+}],
+"loop": true,
+"name": &"IdleFull",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_er7xt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rauv1")
+}],
+"loop": true,
+"name": &"IdleHalf",
+"speed": 5.0
+}]
+
+[node name="SymbolBox" type="TextureRect"]
+custom_minimum_size = Vector2(44, 44)
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Asterisk" type="AnimatedSprite2D" parent="."]
+position = Vector2(22, 22)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_stcss")
+animation = &"IdleFull"
+autoplay = "IdleFull"
