@@ -69,9 +69,9 @@ shape = SubResource("RectangleShape2D_gxs8x")
 
 [node name="Label" type="Label" parent="NorthPassage"]
 offset_left = 1129.0
-offset_top = 294.0
+offset_top = 330.0
 offset_right = 1169.0
-offset_bottom = 317.0
+offset_bottom = 353.0
 text = "Piao"
 
 [node name="WestPassage" type="Area2D" parent="."]
