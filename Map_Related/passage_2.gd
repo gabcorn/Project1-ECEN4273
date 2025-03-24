@@ -41,6 +41,8 @@ func change_room():
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
-		#print("You entered the passage!")
+		body.scale *=2
+		body.get_child(0).remove_child(body.get_child(0).get_child(0))
+			#print("You entered the passage!")
 		change_room()
 	# Replace with function body.

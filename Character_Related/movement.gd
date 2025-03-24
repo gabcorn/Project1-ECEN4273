@@ -41,7 +41,10 @@ func heal_player(inc_health: int) -> void:
 
 func die() -> void:
 	# Implement death logic
-	get_tree().quit()
+	if self.name.begins_with("P"):
+		get_tree().quit()
+	else:
+		get_tree().queue_delete(self)
 
 func set_health_bar(var_health_bar):
 	health_bar = var_health_bar
@@ -106,6 +109,15 @@ func _physics_process(delta: float) -> void:
 	velocity = direction * SPEED
 
 	var collision = move_and_collide(velocity)
+	if collision:
+		var collider = collision.get_collider()
+		var mirror = collider.get_children()[0]
+		if mirror.name == "Mirror3":
+			mirror.name = "PlayerMirror"
+			collider.remove_child(mirror)
+			self.get_child(0).add_child(mirror)
+			mirror.position = Vector2(50, 0)
+			mirror.scale *= 2
 
 func timed_damage():
 	var i = 18

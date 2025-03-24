@@ -46,6 +46,7 @@ func change_room(roomName):
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
+		body.scale *= 0.5
 		#print("You entered the passage!")
 		#print(self.name)
 		change_room(self.name)

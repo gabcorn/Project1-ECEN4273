@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5qa5ujw71r7v"]
+
+[ext_resource type="Script" path="res://Character_Related/piao_laser.gd" id="1_uflio"]
+[ext_resource type="Texture2D" uid="uid://bdloy57mhtxbw" path="res://Map_Related/Images/FreedomPills/FreedomPill.png" id="2_q6c8b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qjegg"]
+size = Vector2(60, 20)
+
+[node name="piao_laser" type="CharacterBody2D"]
+scale = Vector2(0.2, 0.2)
+script = ExtResource("1_uflio")
+
+[node name="FreedomArea" type="CollisionShape2D" parent="."]
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_qjegg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_q6c8b")

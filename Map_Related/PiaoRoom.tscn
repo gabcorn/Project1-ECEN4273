@@ -1,20 +1,21 @@
-[gd_scene load_steps=9 format=3 uid="uid://bovtw5snpkl27"]
+[gd_scene load_steps=10 format=3 uid="uid://bovtw5snpkl27"]
 
 [ext_resource type="PackedScene" uid="uid://dpxc2jwa0sj86" path="res://Game_Logic_and_UI/ui.tscn" id="1_m4n6e"]
+[ext_resource type="Texture2D" uid="uid://bkq1ogt7ncr5w" path="res://icon.svg" id="2_8qpll"]
 [ext_resource type="Script" path="res://Map_Related/passage_2.gd" id="2_bmwmw"]
-[ext_resource type="PackedScene" uid="uid://blqpjlglprcso" path="res://Character_Related/villain.tscn" id="3_2a7ki"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8sn3p"]
-size = Vector2(69.4, 20)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tpgoi"]
-size = Vector2(37, 97.2)
+[ext_resource type="PackedScene" uid="uid://bchef3vi53nqj" path="res://Character_Related/piao.tscn" id="3_wo0hc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_annav"]
-size = Vector2(20, 46.1)
+size = Vector2(34.525, 1.0625)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tpgoi"]
+size = Vector2(74.8, 1.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8sn3p"]
+size = Vector2(61.35, 1.3)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u7lxu"]
-size = Vector2(68.3, 20)
+size = Vector2(59.7, 1.45)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eb231"]
 
@@ -25,29 +26,118 @@ position = Vector2(98, 317)
 
 [node name="CanvasLayer" parent="." instance=ExtResource("1_m4n6e")]
 
-[node name="Walls" type="StaticBody2D" parent="."]
+[node name="VWalls" type="StaticBody2D" parent="."]
 
-[node name="South-Wall" type="CollisionShape2D" parent="Walls"]
-position = Vector2(512, 848)
-scale = Vector2(20, 20)
-shape = SubResource("RectangleShape2D_8sn3p")
+[node name="Mirror3" type="CollisionShape2D" parent="VWalls"]
+position = Vector2(594.313, 310)
+rotation = 1.5708
+scale = Vector2(2.25, 10)
+shape = SubResource("RectangleShape2D_annav")
 
-[node name="West-Wall" type="CollisionShape2D" parent="Walls"]
-position = Vector2(-181, 383)
+[node name="Sprite2D" type="Sprite2D" parent="VWalls/Mirror3"]
+scale = Vector2(0.271, 0.01)
+texture = ExtResource("2_8qpll")
+
+[node name="West-Wall" type="CollisionShape2D" parent="VWalls"]
+position = Vector2(-8, 316)
+rotation = 1.5708
 scale = Vector2(10, 10)
 shape = SubResource("RectangleShape2D_tpgoi")
 
-[node name="East-Wall" type="CollisionShape2D" parent="Walls"]
-position = Vector2(1350, 304)
+[node name="East-Wall" type="CollisionShape2D" parent="VWalls"]
+position = Vector2(1166, 332)
+rotation = 1.5708
 scale = Vector2(20, 20)
 shape = SubResource("RectangleShape2D_annav")
 
-[node name="North-Wall" type="CollisionShape2D" parent="Walls"]
-position = Vector2(557, -198)
+[node name="Mirror4" type="CollisionShape2D" parent="VWalls"]
+position = Vector2(391, 458)
+rotation = 1.5708
+scale = Vector2(2.5, 10)
+shape = SubResource("RectangleShape2D_annav")
+
+[node name="Sprite2D" type="Sprite2D" parent="VWalls/Mirror4"]
+scale = Vector2(0.271, 0.01)
+texture = ExtResource("2_8qpll")
+
+[node name="Mirror5" type="CollisionShape2D" parent="VWalls"]
+position = Vector2(393, 196)
+rotation = 1.5708
+scale = Vector2(2.5, 10)
+shape = SubResource("RectangleShape2D_annav")
+
+[node name="Sprite2D" type="Sprite2D" parent="VWalls/Mirror5"]
+scale = Vector2(0.271, 0.01)
+texture = ExtResource("2_8qpll")
+
+[node name="HWalls" type="StaticBody2D" parent="."]
+
+[node name="South-Wall" type="CollisionShape2D" parent="HWalls"]
+position = Vector2(593, 661)
+scale = Vector2(20, 20)
+shape = SubResource("RectangleShape2D_8sn3p")
+
+[node name="North-Wall" type="CollisionShape2D" parent="HWalls"]
+position = Vector2(580, -15)
 scale = Vector2(20, 20)
 shape = SubResource("RectangleShape2D_u7lxu")
 
+[node name="Mirror1" type="CollisionShape2D" parent="HWalls"]
+position = Vector2(1013, 539)
+scale = Vector2(2.5, 10)
+shape = SubResource("RectangleShape2D_annav")
+
+[node name="Sprite2D" type="Sprite2D" parent="HWalls/Mirror1"]
+scale = Vector2(0.271, 0.01)
+texture = ExtResource("2_8qpll")
+
+[node name="Mirror2" type="CollisionShape2D" parent="HWalls"]
+position = Vector2(1013, 98)
+scale = Vector2(2.5, 10)
+shape = SubResource("RectangleShape2D_annav")
+
+[node name="Sprite2D" type="Sprite2D" parent="HWalls/Mirror2"]
+scale = Vector2(0.271, 0.01)
+texture = ExtResource("2_8qpll")
+
+[node name="Mirror3" type="CollisionShape2D" parent="HWalls"]
+position = Vector2(184, 541)
+scale = Vector2(2.5, 10)
+shape = SubResource("RectangleShape2D_annav")
+
+[node name="Sprite2D" type="Sprite2D" parent="HWalls/Mirror3"]
+scale = Vector2(0.271, 0.01)
+texture = ExtResource("2_8qpll")
+
+[node name="Mirror4" type="CollisionShape2D" parent="HWalls"]
+position = Vector2(184, 100)
+scale = Vector2(2.5, 10)
+shape = SubResource("RectangleShape2D_annav")
+
+[node name="Sprite2D" type="Sprite2D" parent="HWalls/Mirror4"]
+scale = Vector2(0.271, 0.01)
+texture = ExtResource("2_8qpll")
+
+[node name="Mirror5" type="CollisionShape2D" parent="HWalls"]
+position = Vector2(600, 539)
+scale = Vector2(2.5, 10)
+shape = SubResource("RectangleShape2D_annav")
+
+[node name="Sprite2D" type="Sprite2D" parent="HWalls/Mirror5"]
+scale = Vector2(0.271, 0.01)
+texture = ExtResource("2_8qpll")
+
+[node name="Mirror6" type="CollisionShape2D" parent="HWalls"]
+position = Vector2(600, 98)
+scale = Vector2(2.5, 10)
+shape = SubResource("RectangleShape2D_annav")
+
+[node name="Sprite2D" type="Sprite2D" parent="HWalls/Mirror6"]
+scale = Vector2(0.271, 0.01)
+texture = ExtResource("2_8qpll")
+
 [node name="Passage2" type="Area2D" parent="."]
+position = Vector2(1136, -297)
 script = ExtResource("2_bmwmw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Passage2"]
@@ -55,7 +145,15 @@ position = Vector2(-14.9999, 322)
 scale = Vector2(5, 5)
 shape = SubResource("RectangleShape2D_eb231")
 
-[node name="Villain" parent="." instance=ExtResource("3_2a7ki")]
-position = Vector2(971, 330)
+[node name="Label" type="Label" parent="Passage2"]
+offset_left = -52.0
+offset_top = 341.0
+offset_right = -12.0
+offset_bottom = 364.0
+text = "Exit"
+
+[node name="piao" parent="." instance=ExtResource("3_wo0hc")]
+position = Vector2(1054, 327)
+scale = Vector2(0.5, 0.5)
 
 [connection signal="body_entered" from="Passage2" to="Passage2" method="_on_body_entered"]
