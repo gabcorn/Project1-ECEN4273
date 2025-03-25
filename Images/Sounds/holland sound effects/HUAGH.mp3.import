@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cqbk5qdoyq6eq"
+path="res://.godot/imported/HUAGH.mp3-dff7e9388e5f8919252fa23f365315cd.mp3str"
+
+[deps]
+
+source_file="res://Images/Sounds/holland sound effects/HUAGH.mp3"
+dest_files=["res://.godot/imported/HUAGH.mp3-dff7e9388e5f8919252fa23f365315cd.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

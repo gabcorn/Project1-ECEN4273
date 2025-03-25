@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://brx3rsrn1sebk"
+path="res://.godot/imported/holland time bad.mp3-c032f22c965d099c1dd4f985425e21a7.mp3str"
+
+[deps]
+
+source_file="res://Images/Sounds/holland sound effects/holland time bad.mp3"
+dest_files=["res://.godot/imported/holland time bad.mp3-c032f22c965d099c1dd4f985425e21a7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,10 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://bkyw8pc35e8ek"]
+[gd_scene load_steps=11 format=3 uid="uid://bkyw8pc35e8ek"]
 
 [ext_resource type="PackedScene" uid="uid://d3brpoioce6hk" path="res://Character_Related/player_scene.tscn" id="1_2xggm"]
 [ext_resource type="Script" path="res://Map_Related/map.gd" id="1_kn27q"]
 [ext_resource type="AudioStream" uid="uid://bde088xxj0jib" path="res://Images/Sounds/Character-death-sound.mp3" id="3_76drj"]
 [ext_resource type="PackedScene" uid="uid://y1lk8hfldhcp" path="res://Map_Related/MainRoom.tscn" id="3_afx14"]
 [ext_resource type="PackedScene" uid="uid://dpxc2jwa0sj86" path="res://Game_Logic_and_UI/ui.tscn" id="3_q0om5"]
+[ext_resource type="AudioStream" uid="uid://b8tk245x7w8do" path="res://Images/Sounds/Holland time good take.mp3" id="4_6y3l3"]
+[ext_resource type="AudioStream" uid="uid://deqmor08u5xh8" path="res://Images/Sounds/OOF.mp3" id="5_hjtlq"]
+[ext_resource type="AudioStream" uid="uid://c30kmlc0hlrdn" path="res://Images/Sounds/HUAGH.mp3" id="6_po20y"]
+[ext_resource type="AudioStream" uid="uid://co2ijb0moh8ux" path="res://Images/Sounds/YEOW.mp3" id="7_8v11r"]
+[ext_resource type="AudioStream" uid="uid://dv2shvg7foc2o" path="res://Images/Sounds/AHHGH.mp3" id="8_jb5hh"]
 
 [node name="Map" type="Node2D"]
 script = ExtResource("1_kn27q")
@@ -14,7 +19,21 @@ position = Vector2(600, 299)
 
 [node name="PlayerDeathSound" type="AudioStreamPlayer2D" parent="Player"]
 stream = ExtResource("3_76drj")
-volume_db = 10.115
+
+[node name="HollandTime" type="AudioStreamPlayer2D" parent="Player"]
+stream = ExtResource("4_6y3l3")
+
+[node name="OOF" type="AudioStreamPlayer2D" parent="Player"]
+stream = ExtResource("5_hjtlq")
+
+[node name="HUAGH" type="AudioStreamPlayer2D" parent="Player"]
+stream = ExtResource("6_po20y")
+
+[node name="YEOW" type="AudioStreamPlayer2D" parent="Player"]
+stream = ExtResource("7_8v11r")
+
+[node name="AHHGH" type="AudioStreamPlayer2D" parent="Player"]
+stream = ExtResource("8_jb5hh")
 
 [node name="CanvasLayer" parent="." instance=ExtResource("3_q0om5")]
 

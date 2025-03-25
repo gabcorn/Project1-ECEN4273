@@ -45,4 +45,3 @@ script = SubResource("GDScript_7b7nk")
 
 [node name="VillainDeathSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_ic5lp")
-volume_db = 11.442

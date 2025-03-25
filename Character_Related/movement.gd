@@ -13,6 +13,7 @@ var health_bar
 func _ready() -> void:
 	set_health_bar($CanvasLayer/Health_Bar)
 	generate_random_SSN()
+	$HollandTime.play()
 	#timed_damage()
 
 func generate_random_SSN() -> void: # Sets the characters SSN to a random number
@@ -21,9 +22,12 @@ func generate_random_SSN() -> void: # Sets the characters SSN to a random number
 	
 func take_damage(damage: int) -> void:
 	if (curr_health - damage) > 0:
+		var sfx_array = [$OOF, $HUAGH, $YEOW, $AHHGH]
+		var i = randi_range(0, sfx_array.size() - 1)
+		sfx_array[i].play()
 		curr_health -= damage
 		update_health_bar()
-	else: #(curr_health - damage) <= 0
+	else:
 		curr_health = 0
 		update_health_bar()
 		die()
@@ -40,13 +44,21 @@ func heal_player(inc_health: int) -> void:
 	update_health_bar()
 
 func die() -> void:
-	# Implement death logic
+	var death_sound := get_node_or_null("PlayerDeathSound")
+	if death_sound == null:
+		death_sound = get_node_or_null("VillainDeathSound")
+
+	if death_sound:
+		print("Playing death sound: ", death_sound.name)
+		death_sound.play()
+	else:
+		print("No death sound found on ", name)
+
 	if self.name.begins_with("Player"):
-		$PlayerDeathSound.play()
+		await get_tree().create_timer(1.0).timeout
 		get_tree().quit()
 	else:
-		$VillainDeathSound.play()
-		self.get_parent().get_child(0).get_child(0).set_visible(true)
+		await get_tree().create_timer(1.0).timeout
 		get_tree().queue_delete(self)
 
 func set_health_bar(var_health_bar):

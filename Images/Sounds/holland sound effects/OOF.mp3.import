@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bst5wknlsrjcn"
+path="res://.godot/imported/OOF.mp3-41bdc5a819f694becf3eeb0b6634aefa.mp3str"
+
+[deps]
+
+source_file="res://Images/Sounds/holland sound effects/OOF.mp3"
+dest_files=["res://.godot/imported/OOF.mp3-41bdc5a819f694becf3eeb0b6634aefa.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
