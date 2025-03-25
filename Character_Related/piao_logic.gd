@@ -8,6 +8,8 @@ var rng = RandomNumberGenerator.new()
 var time2 = 0
 var time1 = 0
 var count = 0
+var TIME = 0.5 + (self.curr_health / 6) * 0.5
+
 
 func _ready() -> void:
 	set_health_bar($Health_Bar)
@@ -38,7 +40,6 @@ func _physics_process(delta: float) -> void:
 			direction = Vector2(1,1).normalized()
 	# var velocity = 0
 	time2 = time2 + 1
-	var TIME = 0.5 + (self.curr_health / 6) * 0.5
 	
 	
 	#if dist < 400:

@@ -61,6 +61,7 @@ func die() -> void:
 		var instance = scene1.instantiate()
 		get_tree().change_scene_to_file("res://Game_Logic_and_UI/main_menu.tscn")
 	else:
+		self.TIME = 10000
 		await get_tree().create_timer(1.0).timeout
 		self.get_parent().get_child(0).get_child(0).set_visible(true)
 		self.get_parent().get_child(0).position = self.get_parent().get_child(0).position + Vector2(0, 90)
