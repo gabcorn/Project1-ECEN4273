@@ -32,7 +32,7 @@ offset_left = -104.0
 offset_top = 343.0
 offset_right = 8.0
 offset_bottom = 366.0
-text = "Go Here toExit"
+text = "Go Here to Exit"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Passage2"]
 position = Vector2(-14.9999, 322)
