@@ -6,6 +6,7 @@ var scene = load("res://Character_Related/freedom_pills.tscn")
 #const JUMP_VELOCITY = -400.0
 var time2 = 0
 var time1 = 0
+var shoot_dist = 400
 
 func _ready() -> void:
 	set_health_bar($Health_Bar)
@@ -26,7 +27,7 @@ func _physics_process(delta: float) -> void:
 	time2 = time2 + 1
 	
 	
-	if dist < 400:
+	if dist < shoot_dist:
 		velocity = direction * 0
 		if time2 > time1 + int(2 / delta):
 			var instance = scene.instantiate()

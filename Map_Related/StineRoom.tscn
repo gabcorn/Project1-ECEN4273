@@ -4,6 +4,8 @@
 [ext_resource type="Script" path="res://Map_Related/passage_2.gd" id="2_o7d7r"]
 [ext_resource type="PackedScene" uid="uid://blqpjlglprcso" path="res://Character_Related/villain.tscn" id="3_ys7ja"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eb231"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8sn3p"]
 size = Vector2(69.4, 20)
 
@@ -16,9 +18,15 @@ size = Vector2(20, 46.1)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u7lxu"]
 size = Vector2(68.3, 20)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_eb231"]
-
 [node name="StineRoom" type="Node2D"]
+
+[node name="Passage2" type="Area2D" parent="."]
+script = ExtResource("2_o7d7r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Passage2"]
+position = Vector2(-14.9999, 322)
+scale = Vector2(5, 5)
+shape = SubResource("RectangleShape2D_eb231")
 
 [node name="PlayerSpawn" type="Polygon2D" parent="."]
 position = Vector2(98, 317)
@@ -46,14 +54,6 @@ shape = SubResource("RectangleShape2D_annav")
 position = Vector2(557, -198)
 scale = Vector2(20, 20)
 shape = SubResource("RectangleShape2D_u7lxu")
-
-[node name="Passage2" type="Area2D" parent="."]
-script = ExtResource("2_o7d7r")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Passage2"]
-position = Vector2(-14.9999, 322)
-scale = Vector2(5, 5)
-shape = SubResource("RectangleShape2D_eb231")
 
 [node name="Villain" parent="." instance=ExtResource("3_ys7ja")]
 position = Vector2(971, 330)

@@ -1,4 +1,4 @@
-extends Node2D
+extends Area2D
 
 var DIR = Vector2(0, 0)
 var count = 0
@@ -12,3 +12,10 @@ func _process(delta: float) -> void:
 		self.get_tree().queue_delete(self)
 	else:
 		count += 1
+
+
+func _on_body_entered(body: Node2D) -> void:
+	print("hhhh")
+	if (body.name == "Player" or body.name == "Villain") or body.name == "piao":
+		print("dddd")
+		body.take_damage(2)

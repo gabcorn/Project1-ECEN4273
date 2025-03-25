@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 var scene = load("res://Character_Related/piao_laser_texture.tscn")
 
-const SPEED = 40
+const SPEED = 50
 var VELOCITY = Vector2(0.0, 0.0)
 var DIR = Vector2(0.0, 0.0)
 var count = 0
@@ -39,7 +39,7 @@ func _physics_process(delta: float) -> void:
 				DIR = DIR * Vector2(-1, 1)
 				print("f")
 			change_dir()
-			self.position = self.position + DIR * 20
+			self.position = self.position + DIR * 10
 			if count < 7:
 				count += 1
 			else:
