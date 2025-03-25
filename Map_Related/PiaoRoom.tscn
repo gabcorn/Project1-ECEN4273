@@ -157,7 +157,7 @@ scale = Vector2(0.271, 0.01)
 texture = ExtResource("2_8qpll")
 
 [node name="piao" parent="." instance=ExtResource("3_wo0hc")]
-position = Vector2(1018, 332)
+position = Vector2(1015, 314)
 
 [node name="TextureRect" type="TextureRect" parent="."]
 z_index = -11

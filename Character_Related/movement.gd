@@ -59,6 +59,7 @@ func die() -> void:
 		get_tree().quit()
 	else:
 		await get_tree().create_timer(1.0).timeout
+		self.get_parent().get_child(0).get_child(0).set_visible(true)
 		get_tree().queue_delete(self)
 
 func set_health_bar(var_health_bar):
