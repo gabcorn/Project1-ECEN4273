@@ -23,13 +23,8 @@ func generate_random_SSN() -> void: # Sets the characters SSN to a random number
 func take_damage(damage: int) -> void:
 	if (curr_health - damage) > 0:
 		var sfx_array = [$OOF, $HUAGH, $YEOW, $AHHGH]
-		# Stop all hurt SFX first
-		for sfx in sfx_array:
-			sfx.stop()
 		var i = randi_range(0, sfx_array.size() - 1)
-		sfx_array[i].pitch_scale = randf_range(0.9, 1.1)
 		sfx_array[i].play()
-
 		curr_health -= damage
 		update_health_bar()
 	else:

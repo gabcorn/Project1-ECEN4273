@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://y1lk8hfldhcp"]
+[gd_scene load_steps=8 format=3 uid="uid://y1lk8hfldhcp"]
 
 [ext_resource type="Script" path="res://Map_Related/passage.gd" id="1_lm7ic"]
+[ext_resource type="Texture2D" uid="uid://phpg2limja58" path="res://map_1.png" id="2_67tsj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dse4a"]
 size = Vector2(69.4, 20)
@@ -58,5 +59,12 @@ offset_top = 286.0
 offset_right = 1169.0
 offset_bottom = 309.0
 text = "Piao"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -1
+z_as_relative = false
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_67tsj")
 
 [connection signal="body_entered" from="NorthPassage" to="NorthPassage" method="_on_body_entered"]
