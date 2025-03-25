@@ -5,11 +5,13 @@
 [ext_resource type="Script" path="res://Map_Related/passage_2.gd" id="2_bmwmw"]
 [ext_resource type="PackedScene" uid="uid://bchef3vi53nqj" path="res://Character_Related/piao.tscn" id="3_wo0hc"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_annav"]
-size = Vector2(34.525, 1.0625)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eb231"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tpgoi"]
 size = Vector2(74.8, 1.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_annav"]
+size = Vector2(34.525, 1.0625)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8sn3p"]
 size = Vector2(61.35, 1.3)
@@ -17,9 +19,24 @@ size = Vector2(61.35, 1.3)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u7lxu"]
 size = Vector2(59.7, 1.45)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_eb231"]
-
 [node name="PiaoRoom" type="Node2D"]
+
+[node name="Passage2" type="Area2D" parent="."]
+position = Vector2(1136, -297)
+script = ExtResource("2_bmwmw")
+
+[node name="Label" type="Label" parent="Passage2"]
+visible = false
+offset_left = -52.0
+offset_top = 341.0
+offset_right = -12.0
+offset_bottom = 364.0
+text = "Exit"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Passage2"]
+position = Vector2(-14.9999, 322)
+scale = Vector2(5, 5)
+shape = SubResource("RectangleShape2D_eb231")
 
 [node name="PlayerSpawn" type="Polygon2D" parent="."]
 position = Vector2(98, 317)
@@ -27,16 +44,6 @@ position = Vector2(98, 317)
 [node name="CanvasLayer" parent="." instance=ExtResource("1_m4n6e")]
 
 [node name="VWalls" type="StaticBody2D" parent="."]
-
-[node name="Mirror3" type="CollisionShape2D" parent="VWalls"]
-position = Vector2(594.313, 310)
-rotation = 1.5708
-scale = Vector2(2.25, 10)
-shape = SubResource("RectangleShape2D_annav")
-
-[node name="Sprite2D" type="Sprite2D" parent="VWalls/Mirror3"]
-scale = Vector2(0.271, 0.01)
-texture = ExtResource("2_8qpll")
 
 [node name="West-Wall" type="CollisionShape2D" parent="VWalls"]
 position = Vector2(-8, 316)
@@ -67,6 +74,18 @@ scale = Vector2(2.5, 10)
 shape = SubResource("RectangleShape2D_annav")
 
 [node name="Sprite2D" type="Sprite2D" parent="VWalls/Mirror5"]
+scale = Vector2(0.271, 0.01)
+texture = ExtResource("2_8qpll")
+
+[node name="VMirror3" type="StaticBody2D" parent="."]
+
+[node name="Mirror3" type="CollisionShape2D" parent="VMirror3"]
+position = Vector2(594.313, 310)
+rotation = 1.5708
+scale = Vector2(2.25, 10)
+shape = SubResource("RectangleShape2D_annav")
+
+[node name="Sprite2D" type="Sprite2D" parent="VMirror3/Mirror3"]
 scale = Vector2(0.271, 0.01)
 texture = ExtResource("2_8qpll")
 
@@ -135,22 +154,6 @@ shape = SubResource("RectangleShape2D_annav")
 [node name="Sprite2D" type="Sprite2D" parent="HWalls/Mirror6"]
 scale = Vector2(0.271, 0.01)
 texture = ExtResource("2_8qpll")
-
-[node name="Passage2" type="Area2D" parent="."]
-position = Vector2(1136, -297)
-script = ExtResource("2_bmwmw")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Passage2"]
-position = Vector2(-14.9999, 322)
-scale = Vector2(5, 5)
-shape = SubResource("RectangleShape2D_eb231")
-
-[node name="Label" type="Label" parent="Passage2"]
-offset_left = -52.0
-offset_top = 341.0
-offset_right = -12.0
-offset_bottom = 364.0
-text = "Exit"
 
 [node name="piao" parent="." instance=ExtResource("3_wo0hc")]
 position = Vector2(1054, 327)

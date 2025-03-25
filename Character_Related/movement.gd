@@ -41,9 +41,10 @@ func heal_player(inc_health: int) -> void:
 
 func die() -> void:
 	# Implement death logic
-	if self.name.begins_with("P"):
+	if self.name.begins_with("Player"):
 		get_tree().quit()
 	else:
+		self.get_parent().get_child(0).get_child(0).set_visible(true)
 		get_tree().queue_delete(self)
 
 func set_health_bar(var_health_bar):

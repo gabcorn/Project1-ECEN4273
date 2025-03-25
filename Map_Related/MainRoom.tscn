@@ -43,23 +43,8 @@ position = Vector2(557, -198)
 scale = Vector2(20, 20)
 shape = SubResource("RectangleShape2D_733hv")
 
-[node name="EastPassage" type="Area2D" parent="."]
-script = ExtResource("1_lm7ic")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EastPassage"]
-position = Vector2(1151, 290)
-scale = Vector2(5, 5)
-shape = SubResource("RectangleShape2D_gxs8x")
-
-[node name="Label" type="Label" parent="EastPassage"]
-offset_left = 1111.0
-offset_top = 274.0
-offset_right = 1151.0
-offset_bottom = 297.0
-text = "Fan"
-
 [node name="NorthPassage" type="Area2D" parent="."]
-position = Vector2(-592, -283)
+position = Vector2(-125, 41)
 script = ExtResource("1_lm7ic")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NorthPassage"]
@@ -69,44 +54,9 @@ shape = SubResource("RectangleShape2D_gxs8x")
 
 [node name="Label" type="Label" parent="NorthPassage"]
 offset_left = 1129.0
-offset_top = 330.0
+offset_top = 286.0
 offset_right = 1169.0
-offset_bottom = 353.0
+offset_bottom = 309.0
 text = "Piao"
 
-[node name="WestPassage" type="Area2D" parent="."]
-position = Vector2(-1145, 58)
-script = ExtResource("1_lm7ic")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WestPassage"]
-position = Vector2(1151, 290)
-scale = Vector2(5, 5)
-shape = SubResource("RectangleShape2D_gxs8x")
-
-[node name="Label" type="Label" parent="WestPassage"]
-offset_left = 1156.0
-offset_top = 274.0
-offset_right = 1196.0
-offset_bottom = 297.0
-text = "Lannan"
-
-[node name="SouthPassage" type="Area2D" parent="."]
-position = Vector2(-572, 354)
-script = ExtResource("1_lm7ic")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SouthPassage"]
-position = Vector2(1151, 290)
-scale = Vector2(5, 5)
-shape = SubResource("RectangleShape2D_gxs8x")
-
-[node name="Label" type="Label" parent="SouthPassage"]
-offset_left = 1122.0
-offset_top = 261.0
-offset_right = 1162.0
-offset_bottom = 284.0
-text = "Stine"
-
-[connection signal="body_entered" from="EastPassage" to="EastPassage" method="_on_body_entered"]
 [connection signal="body_entered" from="NorthPassage" to="NorthPassage" method="_on_body_entered"]
-[connection signal="body_entered" from="WestPassage" to="WestPassage" method="_on_body_entered"]
-[connection signal="body_entered" from="SouthPassage" to="SouthPassage" method="_on_body_entered"]
