@@ -1,9 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://dhny146piouwu"]
+[gd_scene load_steps=11 format=3 uid="uid://dhny146piouwu"]
 
 [ext_resource type="Script" path="res://Character_Related/piao_logic.gd" id="1_52oud"]
 [ext_resource type="Texture2D" uid="uid://bq26wfi05wds" path="res://Images/piao.jpg" id="2_4ycxq"]
 [ext_resource type="PackedScene" uid="uid://e2mcqvuxloy0" path="res://Game_Logic_and_UI/health_bar.tscn" id="3_khm8d"]
 [ext_resource type="AudioStream" uid="uid://dcgvm23gxrp5g" path="res://Images/Sounds/lego-yoda-death-sound-effect.mp3" id="4_ic5lp"]
+[ext_resource type="AudioStream" uid="uid://chnspikcqwdq2" path="res://Images/Sounds/Minecraft - Mob Villager Hit 1 - Gaming Sound Effect Minecraft (HD)  Sound Effects.mp3" id="5_p2qkt"]
+[ext_resource type="AudioStream" uid="uid://dl4pst8kh47i6" path="res://Images/Sounds/Minecraft - Mob Villager Hit 2 - Gaming Sound Effect Minecraft (HD)  Sound Effects.mp3" id="6_sdxxu"]
+[ext_resource type="AudioStream" uid="uid://bwvm7vrhbtgcr" path="res://Images/Sounds/Minecraft - Mob Villager Hit 3 - Gaming Sound Effect Minecraft (HD)  Sound Effects.mp3" id="7_mrte5"]
+[ext_resource type="AudioStream" uid="uid://cfe1gkf3ysc3b" path="res://Images/Sounds/Minecraft - Mob Villager Hit 4 - Gaming Sound Effect Minecraft (HD)  Sound Effects.mp3" id="8_fqiyc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hv7tk"]
 size = Vector2(105, 126)
@@ -45,3 +49,15 @@ script = SubResource("GDScript_7b7nk")
 
 [node name="VillainDeathSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_ic5lp")
+
+[node name="OOF" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_p2qkt")
+
+[node name="HUAGH" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_sdxxu")
+
+[node name="YEOW" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_mrte5")
+
+[node name="AHHGH" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_fqiyc")

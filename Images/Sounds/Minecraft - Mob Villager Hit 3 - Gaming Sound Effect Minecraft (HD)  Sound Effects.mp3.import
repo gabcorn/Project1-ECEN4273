@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bwvm7vrhbtgcr"
+path="res://.godot/imported/Minecraft - Mob Villager Hit 3 - Gaming Sound Effect Minecraft (HD)  Sound Effects.mp3-49d50a2105c9089b08c827b003d987fe.mp3str"
+
+[deps]
+
+source_file="res://Images/Sounds/Minecraft - Mob Villager Hit 3 - Gaming Sound Effect Minecraft (HD)  Sound Effects.mp3"
+dest_files=["res://.godot/imported/Minecraft - Mob Villager Hit 3 - Gaming Sound Effect Minecraft (HD)  Sound Effects.mp3-49d50a2105c9089b08c827b003d987fe.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
