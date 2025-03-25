@@ -44,6 +44,7 @@ func die() -> void:
 	if self.name.begins_with("Player"):
 		get_tree().quit()
 	else:
+		$AudioStreamPlayer.play()
 		self.get_parent().get_child(0).get_child(0).set_visible(true)
 		get_tree().queue_delete(self)
 
