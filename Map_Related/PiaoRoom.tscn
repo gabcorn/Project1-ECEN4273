@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://bovtw5snpkl27"]
+[gd_scene load_steps=11 format=3 uid="uid://bovtw5snpkl27"]
 
+[ext_resource type="Texture2D" uid="uid://c0mx1f3nqhi3m" path="res://piao_background.png" id="1_8022m"]
 [ext_resource type="PackedScene" uid="uid://dpxc2jwa0sj86" path="res://Game_Logic_and_UI/ui.tscn" id="1_m4n6e"]
 [ext_resource type="Texture2D" uid="uid://bkq1ogt7ncr5w" path="res://icon.svg" id="2_8qpll"]
 [ext_resource type="Script" path="res://Map_Related/passage_2.gd" id="2_bmwmw"]
-[ext_resource type="PackedScene" uid="uid://dhny146piouwu" path="res://Character_Related/piao.tscn" id="3_wo0hc"]
+[ext_resource type="PackedScene" path="res://Character_Related/piao.tscn" id="3_wo0hc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eb231"]
 
@@ -156,6 +157,16 @@ scale = Vector2(0.271, 0.01)
 texture = ExtResource("2_8qpll")
 
 [node name="piao" parent="." instance=ExtResource("3_wo0hc")]
-position = Vector2(1025, 327)
+position = Vector2(1054, 327)
+scale = Vector2(0.5, 0.5)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -11
+z_as_relative = false
+offset_left = 1.0
+offset_top = -24.0
+offset_right = 1153.0
+offset_bottom = 648.0
+texture = ExtResource("1_8022m")
 
 [connection signal="body_entered" from="Passage2" to="Passage2" method="_on_body_entered"]
