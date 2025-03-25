@@ -38,3 +38,6 @@ stream = ExtResource("8_jb5hh")
 [node name="CanvasLayer" parent="." instance=ExtResource("3_q0om5")]
 
 [node name="Node2D" parent="." instance=ExtResource("3_afx14")]
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2(1052, 324)

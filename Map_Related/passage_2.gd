@@ -28,7 +28,7 @@ func change_room(body):
 		body.scale *=2
 		body.get_child(0).remove_child(body.get_child(0).get_child(0))
 		body.SPEED *= 1.25
-		map.get_child(0).global_position = Vector2(20000, 20000)
+		#map.get_child(0).global_position = Vector2(20000, 20000)
 		#map.inTransition = true
 		var instance = scene.instantiate()
 		#print(instance.name)

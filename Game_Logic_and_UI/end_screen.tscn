@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dmnt0vp26dg7n"]
+[gd_scene load_steps=3 format=3 uid="uid://dmnt0vp26dg7n"]
 
 [ext_resource type="Texture2D" uid="uid://c5acn0axwm3k5" path="res://end_screen.png" id="1_i6s36"]
+[ext_resource type="Script" path="res://Game_Logic_and_UI/quit_button_end.gd" id="2_4u85c"]
 
 [node name="EndScreen" type="Node2D"]
 
@@ -10,3 +11,16 @@ z_as_relative = false
 offset_right = 1152.0
 offset_bottom = 648.0
 texture = ExtResource("1_i6s36")
+
+[node name="Quit_Button" type="Button" parent="."]
+z_index = 9
+offset_left = 1008.0
+offset_top = 587.0
+offset_right = 1132.0
+offset_bottom = 626.0
+focus_neighbor_top = NodePath("../Settings_Button")
+focus_neighbor_bottom = NodePath("../Start_Button")
+text = "Quit Game"
+script = ExtResource("2_4u85c")
+
+[connection signal="pressed" from="Quit_Button" to="Quit_Button" method="_on_pressed"]

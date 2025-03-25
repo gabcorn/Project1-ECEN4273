@@ -23,7 +23,7 @@ size = Vector2(59.7, 1.45)
 [node name="PiaoRoom" type="Node2D"]
 
 [node name="Passage2" type="Area2D" parent="."]
-position = Vector2(1136, -297)
+position = Vector2(1136, -386)
 script = ExtResource("2_bmwmw")
 
 [node name="Label" type="Label" parent="Passage2"]

@@ -2,6 +2,8 @@ extends CharacterBody2D
 
 signal collided(collider)
 
+var scene1 = load("res://Game_Logic_and_UI/end_screen.tscn")
+
 @export var SPEED = 10.0
 var health_list : Array[TextureRect]
 var max_health = 18
@@ -56,10 +58,12 @@ func die() -> void:
 
 	if self.name.begins_with("Player"):
 		await get_tree().create_timer(1.0).timeout
-		get_tree().quit()
+		var instance = scene1.instantiate()
+		get_tree().change_scene_to_file("res://Game_Logic_and_UI/main_menu.tscn")
 	else:
 		await get_tree().create_timer(1.0).timeout
 		self.get_parent().get_child(0).get_child(0).set_visible(true)
+		self.get_parent().get_child(0).position = self.get_parent().get_child(0).position + Vector2(0, 90)
 		get_tree().queue_delete(self)
 
 func set_health_bar(var_health_bar):

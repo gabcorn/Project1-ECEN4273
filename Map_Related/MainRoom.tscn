@@ -45,19 +45,19 @@ scale = Vector2(20, 20)
 shape = SubResource("RectangleShape2D_733hv")
 
 [node name="NorthPassage" type="Area2D" parent="."]
-position = Vector2(-125, 41)
+position = Vector2(37, 35)
 script = ExtResource("1_lm7ic")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NorthPassage"]
-position = Vector2(1151, 290)
+position = Vector2(1119, 290)
 scale = Vector2(5, 5)
 shape = SubResource("RectangleShape2D_gxs8x")
 
 [node name="Label" type="Label" parent="NorthPassage"]
-offset_left = 1129.0
-offset_top = 286.0
-offset_right = 1169.0
-offset_bottom = 309.0
+offset_left = 1046.0
+offset_top = 276.0
+offset_right = 1086.0
+offset_bottom = 299.0
 text = "Piao"
 
 [node name="TextureRect" type="TextureRect" parent="."]

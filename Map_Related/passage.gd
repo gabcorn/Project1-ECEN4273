@@ -19,30 +19,31 @@ func _process(delta: float) -> void:
 	pass
 
 func change_room(roomName, body):
-	#get_tree().paused = true
+	# get_tree().paused = true
 	var map = get_parent().get_parent()
 	if not inTransition:
 		body.scale *= 0.5
 		body.SPEED *= 0.8
-		#map.get_child(0).global_position = Vector2(20000, 20000)
-		#map.inTransition = true
+		# map.get_child(0).global_position = Vector2(20000, 20000)
+		# map.inTransition = true
 		var instance = scene[roomName].instantiate()
 		if roomName == "EastPassage":
 			#instance.get_children()[-1].SPEED = 0.0
 			instance.get_children()[-1].shoot_dist = 1000.0
-		#print(instance.name)
-		#print(self)
-		#if map.name != "MainRoom":
+		# print(instance.name)
+		# print(self)
+		# if map.name != "MainRoom":
 		#	map = map.get_parent()
+		#instance.get_children()[-3].global_position = map.get_children()[-1].global_position
 		map.get_child(0).global_position = instance.get_child(1).global_position
-		#print(map)
-		map.add_child(instance)  # Change to your next room scene
-		#map.remove_child(self.get_parent())
+		# print(map)
+		map.add_child(instance) # Change to your next room scene
+		# map.remove_child(self.get_parent())
 		self.get_parent().queue_free()
-		#map.inTransition = false
-		#get_tree().paused = false
+		# map.inTransition = false
+		# get_tree().paused = false
 
-#func _on_Passage_body_entered(body):
+# func _on_Passage_body_entered(body):
 #	if body.name == "Player":
 #		print("You entered the passage!!")
 #		print(self)
