@@ -156,7 +156,6 @@ scale = Vector2(0.271, 0.01)
 texture = ExtResource("2_8qpll")
 
 [node name="piao" parent="." instance=ExtResource("3_wo0hc")]
-position = Vector2(1054, 327)
-scale = Vector2(0.5, 0.5)
+position = Vector2(1025, 327)
 
 [connection signal="body_entered" from="Passage2" to="Passage2" method="_on_body_entered"]
