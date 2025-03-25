@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bkyw8pc35e8ek"]
+[gd_scene load_steps=6 format=3 uid="uid://bkyw8pc35e8ek"]
 
 [ext_resource type="PackedScene" uid="uid://d3brpoioce6hk" path="res://Character_Related/player_scene.tscn" id="1_2xggm"]
 [ext_resource type="Script" path="res://Map_Related/map.gd" id="1_kn27q"]
+[ext_resource type="AudioStream" uid="uid://bde088xxj0jib" path="res://Images/Sounds/Character-death-sound.mp3" id="3_76drj"]
 [ext_resource type="PackedScene" uid="uid://y1lk8hfldhcp" path="res://Map_Related/MainRoom.tscn" id="3_afx14"]
 [ext_resource type="PackedScene" uid="uid://dpxc2jwa0sj86" path="res://Game_Logic_and_UI/ui.tscn" id="3_q0om5"]
 
@@ -10,6 +11,10 @@ script = ExtResource("1_kn27q")
 
 [node name="Player" parent="." instance=ExtResource("1_2xggm")]
 position = Vector2(600, 299)
+
+[node name="PlayerDeathSound" type="AudioStreamPlayer2D" parent="Player"]
+stream = ExtResource("3_76drj")
+volume_db = 10.115
 
 [node name="CanvasLayer" parent="." instance=ExtResource("3_q0om5")]
 

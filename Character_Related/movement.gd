@@ -42,9 +42,10 @@ func heal_player(inc_health: int) -> void:
 func die() -> void:
 	# Implement death logic
 	if self.name.begins_with("Player"):
+		$PlayerDeathSound.play()
 		get_tree().quit()
 	else:
-		$AudioStreamPlayer.play()
+		$VillainDeathSound.play()
 		self.get_parent().get_child(0).get_child(0).set_visible(true)
 		get_tree().queue_delete(self)
 

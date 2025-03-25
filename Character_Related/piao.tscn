@@ -43,6 +43,6 @@ position = Vector2(-3.5, 1)
 shape = SubResource("RectangleShape2D_hv7tk")
 script = SubResource("GDScript_7b7nk")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer2D" parent="."]
+[node name="VillainDeathSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_ic5lp")
-volume_db = 3.2
+volume_db = 11.442
